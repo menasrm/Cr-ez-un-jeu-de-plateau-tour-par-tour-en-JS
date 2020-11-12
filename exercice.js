@@ -1,4 +1,4 @@
-$('body').css('background-color', 'orange');
+*9'body').css('background-color', 'orange');
 
 
 function afficherTableau() {
@@ -21,8 +21,8 @@ function afficherTableau() {
 }
 afficherTableau();
 
-class Personnage {
-	constructor(nom, sante, force){
+class Personnages {
+	constructor(nom, sante, force,){
 		this.nom = nom;
 		this.sante = sante;
 		this.force = force;
@@ -52,13 +52,23 @@ class Personnage {
 	}
 }
 
+const Naruto = new Personnage("Naruto", 100, 25);
+const Sasuke = new Personnage("Sasuke", 100, 25);
 
+console.log("Bienvenue dans ce jeu de combat ! Voici nos 2 super guerrier :");
+console.log(Rocky.decrire());
+console.log(Zoro.decrire());
+ 
 
+class Armes {
+	constructor(nom, force){
+		this.nom = nom;
+		this.force = force;
+	}
+}
 
-
-
-
-
-
-
-
+const Arme par defaut = new Armes("Arme par defaut", 10);
+const Sabre = new Armes("Sabre", 20);
+const Shuriken = new Armes("Shuriken", 15);
+const Rasengan = new Armes("Rasengan", 35);
+const Kunai = new Armes("Kunai, 25");
