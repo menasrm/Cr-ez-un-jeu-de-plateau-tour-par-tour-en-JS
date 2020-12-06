@@ -1,33 +1,44 @@
 export default class Map {
-	constructor(elements){
+	constructor(items){
+		this.mapTab = new Array(10);
 		this.createAndInitMap();
-		this.addElementsTnsideMap(elements);
-		this.afficherMapTab();
+		this.addElementsTnsideMap(items);
 	}
 
 
-	createAndInitMap(){
-		let mapTab = new Array(10);
-		
+	createAndInitMap(elements){
 		for (let i = 0; i < 10; i++) {
-			mapTab[i] = new Array(10);
+			this.mapTab[i] = new Array(10);
 			for (let j = 0; j < 10; j++) {
-				mapTab[i][j] = 0;
+				this.mapTab[i][j] = 0;
 			}
 		}
 	}
-	addElementsTnsideMap(elements){
-		//remplacer les 0 de mapTab par des objets contenu dans elements et les faire aléatoirement.
-		mapTab[i][j] = elements[i];
-
-	}
-	afficherMapTab(){
-	//faire des console.log pour afficher mapTab(prendre exemple sur la methode createAndInitMap.)
 	
+	addElementsTnsideMap(items){
+		for (let k = 0; k < 6; k++) {
+			let i = getRandomInt(9);
+			let j = getRandomInt(9);
+			while (this.mapTab[i][j] != 0) {
+				i = getRandomInt(9);
+				j = getRandomInt(9);
+			}
+			this.mapTab[i][j] = items[k];
+		}
 	}
+
+	afficherMapTab(){
+		for (let i = 0; i < 10; i++) {
+			console.log(this.mapTab[i]);
+			for (let j = 0; j < 10; j++) {
+				// console.log(this.mapTab[i][j]);
+			}
+		}
+	}
+
 }
 
-		function getRandomInt(max) {
-  			return Math.floor(Math.random() * Math.floor(max));
-		}
+function getRandomInt(max) {
+  	return Math.floor(Math.random() * Math.floor(max));
+}
 		

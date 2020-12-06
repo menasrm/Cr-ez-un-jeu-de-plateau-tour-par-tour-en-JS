@@ -1,8 +1,8 @@
 export default class Personnage {
-	constructor(nom, sante, force,){
+	constructor(nom, sante, arme){
 		this.nom = nom;
 		this.sante = sante;
-		this.force = force;
+		this.arme = arme;
 	}
 
 	attaquer(cible) {
