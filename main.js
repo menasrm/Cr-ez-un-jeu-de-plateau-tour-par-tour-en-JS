@@ -25,6 +25,11 @@ function afficherTableau() {
 	tableau.appendChild(tableauBody);
 	body.appendChild(tableau);
 }
+
+function refreshTab() {
+	maCarte.mapTab[0-9][0-9]; //transformer tout ce qui se passe dans la map en front end.
+}
+
 afficherTableau();
 
 
@@ -57,9 +62,8 @@ tableauDeJeu.addElement(Kunai);
 
 
 // Création de la map back end
-const maCarte = new Map(tableauDeJeu.items);
+const maCarte = new Map(tableauDeJeu.items, 10);
 maCarte.afficherMapTab();
-
 
 
 
