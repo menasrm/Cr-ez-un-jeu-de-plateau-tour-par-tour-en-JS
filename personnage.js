@@ -1,8 +1,17 @@
 export default class Personnage {
-	constructor(nom, sante, arme){
+	constructor(nom, sante, arme, id){
 		this.nom = nom;
 		this.sante = sante;
 		this.arme = arme;
+		this.id = id;
+		this.cssClass = "player" + id;
+		this.horizontalAxis = -1;
+		this.verticalAxis = -1;
+	}
+
+	majCoordinates (i, j) {
+		this.horizontalAxis = i;
+		this.verticalAxis = j;
 	}
 
 	attaquer(cible) {

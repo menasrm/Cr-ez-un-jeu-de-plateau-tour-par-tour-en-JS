@@ -1,3 +1,7 @@
+body {
+	background-color: orange;
+}
+
 table {
 	 border:1px solid black;
  	 padding: 33px;
@@ -8,4 +12,42 @@ table {
 td {
     border: 1px solid #333;
     padding: 33px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.inaccessibleBoxes {
+	background-image: url('/images/forest.png');
+}
+
+.player1 {
+	background-image: url('/images/dog.png');
+}
+
+.player2 {
+	background-image: url('/images/cat.png');
+}
+
+.arme1 {
+	background-image: url('/images/fish.png');
+}
+
+.arme2 {
+	background-image: url('/images/fish.png');
+}
+
+.arme3 {
+	background-image: url('/images/fish-blue.png');
+}
+
+.arme4 {
+	background-image: url('/images/fish-red.png');
+}
+
+.arme5 {
+	background-image: url('/images/fish-grey.png');
+}
+
+.arme6 {
+	background-image: url('/images/fish-green.png');
 }
