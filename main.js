@@ -37,11 +37,11 @@ tableauDeJeu.addElement(Kunai);
 
 // Création de la map back end
 const maCarte = new Map(tableauDeJeu.mapItems, 10); // arg2 = nombre de cailloux
-maCarte.afficherMapTab();
 
 
 // Initialisation de la map FrontEnd
 tableauDeJeu.initFrontMap(maCarte.mapTab);
+tableauDeJeu.initPlayerInfos([Naruto, Sasuke]);
 
 
 

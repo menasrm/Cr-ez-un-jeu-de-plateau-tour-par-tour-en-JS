@@ -1,17 +1,33 @@
+/*****/
+/*ALL*/
+/*****/
 body {
 	background-color: orange;
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	justify-content: center;
 }
 
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+	max-width: 1800px;
+}
+
+
+/*****/
+/*MAP*/
+/*****/
 table {
 	 border:1px solid black;
- 	 padding: 33px;
- 	 width: 100%;
-
 }
 
 td {
     border: 1px solid #333;
-    padding: 33px;
+    width: 64px;
+    height: 64px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -29,11 +45,11 @@ td {
 }
 
 .arme1 {
-	background-image: url('/images/fish.png');
+	background-image: url('/images/fish-yellow.png');
 }
 
 .arme2 {
-	background-image: url('/images/fish.png');
+	background-image: url('/images/fish-purple.png');
 }
 
 .arme3 {
@@ -50,4 +66,66 @@ td {
 
 .arme6 {
 	background-image: url('/images/fish-green.png');
+}
+
+
+/********/
+/*Player*/
+/********/
+.playerContainer {
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.playerContainer .playerImage,
+.playerContainer .playerArmeImage {
+	width: 64px;
+	height: 64px;
+}
+
+.playerContainer h2 {
+	margin-top: 60px;
+    font-weight: 900;
+    font-size: 35px;
+}
+
+.playerContainer .playerName {
+    font-size: 25px;
+    margin-top: 0px;
+}
+
+.playerContainer .playerArmeH2 {
+	margin-bottom: 0px;
+}
+
+.playerContainer h4, .playerContainer p {
+	margin: 0px;
+}
+
+.playerHp, .playerCoordinates, .playerArmeForce {
+	display: flex;
+}
+
+
+
+/********/
+/*Media*/
+/********/
+@media screen and (max-width: 1104px) {
+  .player1Container {
+    order: 1;
+  }
+  .player2Container {
+    order: 2;
+  }
+  .frontMapContainer {
+    order: 3;
+    min-width: 704px;
+  }
+  .container {
+  	flex-wrap: wrap;
+  	min-width: 730px;
+  }
 }
